@@ -1,25 +1,132 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>The Crystal Programming Language</title>
+    <description>A compiled language with Ruby like syntax and type inference</description>
+    <link>http://crystal-lang.org</link>
+    <atom:link href="http://crystal-lang.org/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        {% if post.excerpt %}
-          <description>{{ post.excerpt | xml_escape }}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape }}</description>
-        {% endif %}
-                          <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <title>Split the repo!</title>
+        
+          <description>&lt;p&gt;Crystal is made of many parts. Some of them migrated to other repositories this week.&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Tue, 28 Jun 2016 00:00:00 -0300</pubDate>
+        <link>http://crystal-lang.org/2016/06/28/split-the-repo.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/06/28/split-the-repo.html</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Crystal 0.18.0 released!</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/0.18.0&quot;&gt;Crystal 0.18.0&lt;/a&gt; has been released!&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Tue, 14 Jun 2016 00:00:00 -0300</pubDate>
+        <link>http://crystal-lang.org/2016/06/14/crystal-0.18.0-released.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/06/14/crystal-0.18.0-released.html</guid>
+      </item>
+    
+      <item>
+        <title>Heroku Buildpack</title>
+        
+          <description>&lt;p&gt;At the end of 2014 a &lt;a href=&quot;https://github.com/manastech/heroku-buildpack-crystal/commit/b364f9115706a2a1c97ff40bd44aef1cf73e6288&quot;&gt;first draft&lt;/a&gt; of a &lt;a href=&quot;//heroku.com&quot;&gt;Heroku&lt;/a&gt; buildpack for crystal was createad. This was truly great. Being able to run crystal apps in the Heroku stack was charm idea.&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Thu, 26 May 2016 00:00:00 -0300</pubDate>
+        <link>http://crystal-lang.org/2016/05/26/heroku-buildpack.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/05/26/heroku-buildpack.html</guid>
+      </item>
+    
+      <item>
+        <title>Crystal 0.17.0 released!</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/0.17.0&quot;&gt;Crystal 0.17.0&lt;/a&gt; has been released!&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Tue, 17 May 2016 00:00:00 -0300</pubDate>
+        <link>http://crystal-lang.org/2016/05/17/crystal-0.17.0-released.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/05/17/crystal-0.17.0-released.html</guid>
+      </item>
+    
+      <item>
+        <title>Crystal 0.16.0 released!</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/0.16.0&quot;&gt;Crystal 0.16.0&lt;/a&gt; has been released!&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Thu, 05 May 2016 00:00:00 -0300</pubDate>
+        <link>http://crystal-lang.org/2016/05/05/crystal-0.16.0-released.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/05/05/crystal-0.16.0-released.html</guid>
+      </item>
+    
+      <item>
+        <title>Crystal 0.15.0 released!</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/0.15.0&quot;&gt;Crystal 0.15.0&lt;/a&gt; has been released!&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Sat, 02 Apr 2016 00:00:00 -0300</pubDate>
+        <link>http://crystal-lang.org/2016/04/02/crystal-0.15.0-released.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/04/02/crystal-0.15.0-released.html</guid>
+      </item>
+    
+      <item>
+        <title>Crystal 0.14.1 released!</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/0.14.1&quot;&gt;Crystal 0.14.1&lt;/a&gt; has been released!&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Mon, 21 Mar 2016 00:00:00 -0300</pubDate>
+        <link>http://crystal-lang.org/2016/03/21/crystal-0.14.1-released.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/03/21/crystal-0.14.1-released.html</guid>
+      </item>
+    
+      <item>
+        <title>Crystal 0.13.0 released!</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/0.13.0&quot;&gt;Crystal 0.13.0&lt;/a&gt; has been released!&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Mon, 07 Mar 2016 00:00:00 -0300</pubDate>
+        <link>http://crystal-lang.org/2016/03/07/crystal-0.13.0-released.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/03/07/crystal-0.13.0-released.html</guid>
+      </item>
+    
+      <item>
+        <title>Buenos Aires Crystal Meetup</title>
+        
+          <description>&lt;p&gt;On February 4th we hosted the first Crystal Meetup in Argentina.
+More than 20 people attended and 15 people saw the live streaming.
+We had a great time and got to know some of our supporters from our own country.&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Thu, 18 Feb 2016 00:00:00 -0200</pubDate>
+        <link>http://crystal-lang.org/2016/02/18/buenos-aires-crystal-meetup.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/02/18/buenos-aires-crystal-meetup.html</guid>
+      </item>
+    
+      <item>
+        <title>Crystal 0.12.0 released!</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/crystal-lang/crystal/releases/tag/0.12.0&quot;&gt;Crystal 0.12.0&lt;/a&gt; has been released!&lt;/p&gt;
+
+</description>
+        
+                          <pubDate>Tue, 16 Feb 2016 00:00:00 -0200</pubDate>
+        <link>http://crystal-lang.org/2016/02/16/crystal-0.12.0-released.html</link>
+        <guid isPermaLink="true">http://crystal-lang.org/2016/02/16/crystal-0.12.0-released.html</guid>
+      </item>
+    
   </channel>
 </rss>

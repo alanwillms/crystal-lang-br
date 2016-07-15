@@ -34,7 +34,7 @@
     <body>
         
         
-    <div class="book" data-level="0" data-basepath="." data-revision="Wed May 25 2016 15:38:00 GMT-0300 (BRT)">
+    <div class="book" data-level="0" data-basepath="." data-revision="Fri Jul 15 2016 16:13:13 GMT-0300 (BRT)">
     
 
 <div class="book-summary">
@@ -503,44 +503,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="syntax_and_semantics/local_variables.html">
-            
-                
-                    <a href="./syntax_and_semantics/local_variables.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.3.</b>
-                        
-                        Variáveis locais
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="syntax_and_semantics/global_variables.html">
-            
-                
-                    <a href="./syntax_and_semantics/global_variables.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.4.</b>
-                        
-                        Variáveis globais
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="syntax_and_semantics/assignment.html">
+        <li class="chapter " data-level="4.3" data-path="syntax_and_semantics/assignment.html">
             
                 
                     <a href="./syntax_and_semantics/assignment.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.5.</b>
+                            <b>4.3.</b>
                         
                         Atribuição
                     </a>
@@ -549,14 +519,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.5.1" data-path="syntax_and_semantics/multiple_assignment.html">
+        <li class="chapter " data-level="4.3.1" data-path="syntax_and_semantics/multiple_assignment.html">
             
                 
                     <a href="./syntax_and_semantics/multiple_assignment.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.5.1.</b>
+                            <b>4.3.1.</b>
                         
                         Atribuição múltipla
                     </a>
@@ -566,6 +536,36 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="syntax_and_semantics/local_variables.html">
+            
+                
+                    <a href="./syntax_and_semantics/local_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Variáveis locais
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="syntax_and_semantics/global_variables.html">
+            
+                
+                    <a href="./syntax_and_semantics/global_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Variáveis globais
+                    </a>
+            
             
         </li>
     
@@ -896,7 +896,7 @@
                         
                             <b>4.8.</b>
                         
-                        Types and methods
+                        Tipos e métodos
                     </a>
             
             
@@ -912,7 +912,7 @@
                         
                             <b>4.8.1.</b>
                         
-                        Everything is an object
+                        Tudo é um objeto
                     </a>
             
             
@@ -927,7 +927,7 @@
                         
                             <b>4.8.2.</b>
                         
-                        The Program
+                        O Programa
                     </a>
             
             
@@ -942,7 +942,7 @@
                         
                             <b>4.8.3.</b>
                         
-                        Classes and methods
+                        Classes e métodos
                     </a>
             
             
@@ -958,7 +958,7 @@
                         
                             <b>4.8.3.1.</b>
                         
-                        new, initialize and allocate
+                        new, initialize e allocate
                     </a>
             
             
@@ -973,7 +973,7 @@
                         
                             <b>4.8.3.2.</b>
                         
-                        Methods and instance variables
+                        Métodos e variáveis de instância
                     </a>
             
             
@@ -988,7 +988,7 @@
                         
                             <b>4.8.3.3.</b>
                         
-                        Type inference
+                        Inferência de tipo
                     </a>
             
             
@@ -2009,14 +2009,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1" data-path="guides/concurrency.html">
+        <li class="chapter " data-level="6.1" data-path="guides/performance.html">
+            
+                
+                    <a href="./guides/performance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Performance
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="guides/concurrency.html">
             
                 
                     <a href="./guides/concurrency.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.1.</b>
+                            <b>6.2.</b>
                         
                         Concurrency
                     </a>
@@ -2139,11 +2154,15 @@
 <p>Crystal &#xE9; uma linguagem de programa&#xE7;&#xE3;o que tem os seguintes objetivos:</p>
 <ul>
 <li>Ter uma sintaxe semelhante &#xE0; de Ruby (mas nosso objetivo n&#xE3;o &#xE9; compatibilidade)</li>
-<li>Checagem de tipos est&#xE1;tica, mas sem ter que especificar o tipo das vari&#xE1;veis ou dos argumentos dos m&#xE9;todos.</li>
+<li>Ter checagem de tipos est&#xE1;tica, mas sem ter que especificar o tipo das vari&#xE1;veis ou dos argumentos dos m&#xE9;todos.</li>
 <li>Poder chamar c&#xF3;digo em C atrav&#xE9;s de <em>bindings</em> escritos em Crystal.</li>
 <li>Ter avalia&#xE7;&#xE3;o e gera&#xE7;&#xE3;o de c&#xF3;digo em tempo de compila&#xE7;&#xE3;o, para evitar c&#xF3;digo de <em>boilerplate</em>.</li>
 <li>Compilar em c&#xF3;digo nativo eficiente.</li>
 </ul>
+<h2 id="build">Build</h2>
+<pre><code>$ npm install -g gitbook-cli
+$ gitbook build --gitbook=2.3.2
+</code></pre><p>O Html ser&#xE1; salvo no diret&#xF3;rio <code>_book</code>.</p>
 
                     
                     </section>

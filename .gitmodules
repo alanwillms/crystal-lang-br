@@ -1,0 +1,6 @@
+[submodule "crystal-website"]
+	path = crystal-website
+	url = https://github.com/crystal-lang-br/crystal-website.git
+[submodule "crystal-book"]
+	path = crystal-book
+	url = https://github.com/crystal-lang-br/crystal-book.git

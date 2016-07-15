@@ -1,19 +1,106 @@
----
----
-<section>
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <link href='/stylesheets/stylesheet.css' rel='stylesheet'>
+    <link href='/feed.xml' rel='alternate' title='Atom 1.0' type='application/atom+xml'>
+    <link href='/images/favico.png' rel='icon' type='image/png'>
+    <link href='/images/favico.ico' rel='shortcut icon' type='image/x-icon'>
+    <script src='/javascripts/viewer.js' type='text/javascript'></script>
+    <!-- Begin Jekyll SEO tag v1.4.0 -->
+<title>The Crystal Programming Language - A compiled language with Ruby like syntax and type inference</title>
+<meta property="og:title" content="The Crystal Programming Language" />
+<meta name="description" content="A compiled language with Ruby like syntax and type inference" />
+<meta property="og:description" content="A compiled language with Ruby like syntax and type inference" />
+<link rel="canonical" href="http://crystal-lang.org/" />
+<meta property="og:url" content="http://crystal-lang.org/" />
+<meta property="og:site_name" content="The Crystal Programming Language" />
+<meta property="og:image" content="http://crystal-lang.org/images/icon.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@CrystalLanguage" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "The Crystal Programming Language",
+    "headline": "The Crystal Programming Language",
+    "image": "http://crystal-lang.org/images/icon.png",
+    "description": "A compiled language with Ruby like syntax and type inference",
+    "logo": "http://crystal-lang.org/images/crystal-h.png",
+    "url": "http://crystal-lang.org/"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+  </head>
+  <body>
+    <div id='fund'>
+      <div class='inner'>
+        <div class='badge'>
+          <a class='text' href='https://www.bountysource.com/teams/crystal-lang/fundraisers/702-crystal-language' target='_blank'>Financie Crystal e ajude a torná-la pronta para produção!</a>
+          <a class='text' href='/sponsors'>Conheça nossos patrocinadores</a>
+          <a href='https://www.bountysource.com/teams/crystal-lang/fundraisers/702-crystal-language' target='_blank'>
+            <img src='https://api.bountysource.com/badge/team?team_id=89730&amp;style=raised'>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class='wrapper'>
+      <header>
+  <div class='logo'>
+    <canvas height='216' id='logo-canvas' style='cursor:move' width='216'></canvas>
+    <a href='/'>
+      <img height='56' src='/images/crystal_logo.png' width='199'>
+    </a>
+  </div>
+  <div id='logo-text'>A Linguagem de Programação</div>
+  <nav>
+    <ul class='menu'>
+      <li>
+        <a href='https://github.com/crystal-lang/crystal' target='_blank' title='Git'>
+          <i class='ic git'></i>
+          <div>GITHUB</div>
+        </a>
+      </li>
+      <li>
+        <a href='/docs' target='_blank' title='Docs'>
+          <i class='ic bookmark'></i>
+          <div>DOCS</div>
+        </a>
+      </li>
+      <li>
+        <a href='/api' target='_blank' title='API'>
+          <i class='ic download'></i>
+          <div>API</div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+      <section>
   <h1>Metas da Linguagem</h1>
   <ul class='goals'>
-    <li>Ter uma sintaxe similar à Ruby (porém compatibilidade com a mesma não é uma meta)</li>
-    <li>Checagem estática de tipos mas sem ter de especificar o tipo das variáveis ou argumentos de método.</li>
-    <li>Poder chamar código em C escrevendo bindings ao mesmo em Crystal.</li>
+    <li>Ter uma sintaxe similar a Ruby (porém a compatibilidade com ela não é uma meta)</li>
+    <li>Checagem estática de tipos, mas sem ter de especificar o tipo das variáveis ou argumentos de método.</li>
+    <li>Poder chamar código em C escrevendo bindings em Crystal.</li>
     <li>Ter avaliação em tempo de compilação e geração de código, para evitar código repetido.</li>
     <li>Compilar em código nativo eficiente.</li>
   </ul>
 </section>
 <section>
-  <h1>Como se parece</h1>
+  <h1>Como ela é</h1>
   <div class='code_section'>
-    {% include sample_code.md %}
+    <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># Um servidor HTTP bem básico</span>
+<span class="nb">require</span> <span class="s2">"http/server"</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="no">HTTP</span><span class="o">::</span><span class="no">Server</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">8080</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">context</span><span class="o">|</span>
+  <span class="n">context</span><span class="p">.</span><span class="nf">response</span><span class="p">.</span><span class="nf">content_type</span> <span class="o">=</span> <span class="s2">"text/plain"</span>
+  <span class="n">context</span><span class="p">.</span><span class="nf">response</span><span class="p">.</span><span class="nf">print</span> <span class="s2">"Olá mundo, eu recebi </span><span class="si">#{</span><span class="n">context</span><span class="p">.</span><span class="nf">request</span><span class="p">.</span><span class="nf">path</span><span class="si">}</span><span class="s2">!"</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s2">"Rodando em: http://0.0.0.0:8080"</span>
+<span class="n">server</span><span class="p">.</span><span class="nf">listen</span></code></pre></figure>
+
   </div>
 </section>
 <section>
@@ -24,6 +111,29 @@
       <li>O compilador é escrito em Crystal.</li>
     </ul>
   </p>
+</section>
+<section class='sponsors'>
+  <h1>Maiores Patrocinadores</h1>
+  <div class='sponsors-list'>
+    <a href='http://www.manas.com.ar' target='_blank'>
+      <img src='/images/sponsors/manas.png' title='Manas'>
+      <br>
+      Manas Technology Solutions
+    </a>
+    <a href='https://www.compose.io' target='_blank'>
+      <img src='/images/sponsors/compose__an_ibm_company.png' title='Compose, an IBM company'>
+      <br>
+      Compose, an IBM company
+    </a>
+    <a href='http://www.nikolamotor.com' target='_blank'>
+      <img src='/images/sponsors/nikola_motor_company.png' title='Nikola Motor Company'>
+      <br>
+      Nikola Motor Company
+    </a>
+  </div>
+  <div class='footer'>
+    <a class='all-sponsors' href='/sponsors'>Conheça todos os nossos patrocinadores</a>
+  </div>
 </section>
 <section>
   <h1>Comunidade</h1>
@@ -37,16 +147,428 @@
 <section>
   <h1>Postagens em nosso blog</h1>
   <div class='blog_roll'>
-    {% for post in site.posts %}
+    
     <article>
       <div class='thumbnail'>
-        <p>{{ post.thumbnail }}</p>
+        <p>G</p>
       </div>
       <h3>
-        <a href='{{post.url}}'>{{ post.title }}</a>
+        <a href='/2016/06/28/split-the-repo.html'>Split the repo!</a>
       </h3>
-      <p>{{ post.summary }}</p>
+      <p>where the git...</p>
     </article>
-    {% endfor %}
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2016/06/14/crystal-0.18.0-released.html'>Crystal 0.18.0 released!</a>
+      </h3>
+      <p>:-)</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>H</p>
+      </div>
+      <h3>
+        <a href='/2016/05/26/heroku-buildpack.html'>Heroku Buildpack</a>
+      </h3>
+      <p></p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2016/05/17/crystal-0.17.0-released.html'>Crystal 0.17.0 released!</a>
+      </h3>
+      <p>Named tuples</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2016/05/05/crystal-0.16.0-released.html'>Crystal 0.16.0 released!</a>
+      </h3>
+      <p>Types</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2016/04/02/crystal-0.15.0-released.html'>Crystal 0.15.0 released!</a>
+      </h3>
+      <p>nil?!</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2016/03/21/crystal-0.14.1-released.html'>Crystal 0.14.1 released!</a>
+      </h3>
+      <p>Playground!</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2016/03/07/crystal-0.13.0-released.html'>Crystal 0.13.0 released!</a>
+      </h3>
+      <p>A bunch of features</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>m</p>
+      </div>
+      <h3>
+        <a href='/2016/02/18/buenos-aires-crystal-meetup.html'>Buenos Aires Crystal Meetup</a>
+      </h3>
+      <p>First meetup in Argentina</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2016/02/16/crystal-0.12.0-released.html'>Crystal 0.12.0 released!</a>
+      </h3>
+      <p>Encoding support</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2016/01/23/crystal-0.11.0-released.html'>Crystal 0.11.0 released!</a>
+      </h3>
+      <p>Improvements and bug fixes</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>🎄</p>
+      </div>
+      <h3>
+        <a href='/2015/12/24/the-future-of-crystal.html'>The future of Crystal</a>
+      </h3>
+      <p>A short story</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/12/23/crystal-0.10.0-released.html'>Crystal 0.10.0 released!</a>
+      </h3>
+      <p>A small release</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/10/30/crystal-0.9.1-released.html'>Crystal 0.9.1 released!</a>
+      </h3>
+      <p>Formatter</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/10/16/crystal-0.9.0-released.html'>Crystal 0.9.0 released!</a>
+      </h3>
+      <p>Formatter</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>⚒</p>
+      </div>
+      <h3>
+        <a href='/2015/09/05/tools.html'>Crystal tools</a>
+      </h3>
+      <p>Tools for Atom and everybody</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/09/04/crystal-0.7.7-released.html'>Crystal 0.7.7 released!</a>
+      </h3>
+      <p>New commiters</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>t</p>
+      </div>
+      <h3>
+        <a href='/2015/08/24/its-a-typeof-magic.html'>It's a typeof magic</a>
+      </h3>
+      <p>It's magic!</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/07/30/crystal-0.7.5-released.html'>Crystal 0.7.5 released!</a>
+      </h3>
+      <p>A small release</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/06/23/crystal-0.7.4-released.html'>Crystal 0.7.4 released!</a>
+      </h3>
+      <p>A small release</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/06/07/crystal-0.7.3-released.html'>Crystal 0.7.3 released!</a>
+      </h3>
+      <p>A small release</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/05/26/crystal-0.7.2-released.html'>Crystal 0.7.2 released!</a>
+      </h3>
+      <p>A small release</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/04/30/crystal-0.7.0-released.html'>Crystal 0.7.0 released!</a>
+      </h3>
+      <p>Non-blocking IO</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>??</p>
+      </div>
+      <h3>
+        <a href='/2015/04/01/auto.html'>Auto</a>
+      </h3>
+      <p>A smarter compiler</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>0x</p>
+      </div>
+      <h3>
+        <a href='/2015/03/04/internals.html'>Internals</a>
+      </h3>
+      <p>Memory representation</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/03/04/crystal-0.6.1-released.html'>Crystal 0.6.1 released!</a>
+      </h3>
+      <p>A small release</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/02/12/crystal-0.6.0-released.html'>Crystal 0.6.0 released!</a>
+      </h3>
+      <p>Thread-safe magic</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2015/02/07/crystal-0.5.9-released.html'>Crystal 0.5.9 released!</a>
+      </h3>
+      <p>The community grows</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2014/12/31/crystal-0.5.6-release.html'>Crystal 0.5.6 released!</a>
+      </h3>
+      <p>Automatic documentation is here</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>??</p>
+      </div>
+      <h3>
+        <a href='/2014/12/06/another-language.html'>Another language</a>
+      </h3>
+      <p>What if...</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>+</p>
+      </div>
+      <h3>
+        <a href='/2014/12/04/crystal-0.5.4-released.html'>Crystal 0.5.4 released!</a>
+      </h3>
+      <p></p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>1</p>
+      </div>
+      <h3>
+        <a href='/2014/06/19/crystal-0.1.0-released.html'>Crystal 0.1.0 released!</a>
+      </h3>
+      <p>First official version</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>T</p>
+      </div>
+      <h3>
+        <a href='/2014/04/27/type-inference-rules.html'>Type inference rules</a>
+      </h3>
+      <p>Part 2 of the type inference series</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>gc</p>
+      </div>
+      <h3>
+        <a href='/2013/12/05/garbage-collector.html'>Garbage Collector</a>
+      </h3>
+      <p>Enabled the Boehm GC</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>:)</p>
+      </div>
+      <h3>
+        <a href='/2013/11/14/good-bye-ruby-thursday.html'>Good bye Ruby Thursday</a>
+      </h3>
+      <p>Bootstraped the compiler</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>x=</p>
+      </div>
+      <h3>
+        <a href='/2013/09/23/type-inference-part-1.html'>Type inference (part 1)</a>
+      </h3>
+      <p>How type inference works</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>&.</p>
+      </div>
+      <h3>
+        <a href='/2013/09/15/to-proc.html'>to_proc</a>
+      </h3>
+      <p>Shortcut syntax for writing one-argument blocks</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>h!</p>
+      </div>
+      <h3>
+        <a href='/2013/09/04/happy-birthday-crystal.html'>Happy birthday, Crystal!</a>
+      </h3>
+      <p>Crystal is one year old</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>NP</p>
+      </div>
+      <h3>
+        <a href='/2013/07/13/null-pointer-exception.html'>Null Pointer Exception</a>
+      </h3>
+      <p>Crystal doesn't let you have a Null Pointer Exception</p>
+    </article>
+    
+    <article>
+      <div class='thumbnail'>
+        <p>Hi</p>
+      </div>
+      <h3>
+        <a href='/2013/07/10/hello-world.html'>Hello World</a>
+      </h3>
+      <p>The famous Hello World program written in different ways in Crystal</p>
+    </article>
+    
   </div>
 </section>
+
+      <footer>
+  <a href='http://www.manas.com.ar' target='_blank'>
+    <img height='34' src='/images/born-and-raised.svg' width='100'>
+  </a>
+</footer>
+
+    </div>
+    <script>
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+  try {
+    var pageTracker = _gat._getTracker("UA-42353458-1");
+    pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
+    <script src='/javascripts/main.js' type='text/javascript'></script>
+  </body>
+</html>

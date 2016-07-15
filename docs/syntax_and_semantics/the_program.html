@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>The Program | Linguagem de Programação Crystal</title>
+        <title>O Programa | Linguagem de Programação Crystal</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.3.2">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.8.2" data-basepath=".." data-revision="Wed May 25 2016 15:38:00 GMT-0300 (BRT)">
+    <div class="book" data-level="4.8.2" data-basepath=".." data-revision="Fri Jul 15 2016 16:13:13 GMT-0300 (BRT)">
     
 
 <div class="book-summary">
@@ -505,44 +505,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="syntax_and_semantics/local_variables.html">
-            
-                
-                    <a href="../syntax_and_semantics/local_variables.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.3.</b>
-                        
-                        Variáveis locais
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="syntax_and_semantics/global_variables.html">
-            
-                
-                    <a href="../syntax_and_semantics/global_variables.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.4.</b>
-                        
-                        Variáveis globais
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="syntax_and_semantics/assignment.html">
+        <li class="chapter " data-level="4.3" data-path="syntax_and_semantics/assignment.html">
             
                 
                     <a href="../syntax_and_semantics/assignment.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.5.</b>
+                            <b>4.3.</b>
                         
                         Atribuição
                     </a>
@@ -551,14 +521,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.5.1" data-path="syntax_and_semantics/multiple_assignment.html">
+        <li class="chapter " data-level="4.3.1" data-path="syntax_and_semantics/multiple_assignment.html">
             
                 
                     <a href="../syntax_and_semantics/multiple_assignment.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.5.1.</b>
+                            <b>4.3.1.</b>
                         
                         Atribuição múltipla
                     </a>
@@ -568,6 +538,36 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="syntax_and_semantics/local_variables.html">
+            
+                
+                    <a href="../syntax_and_semantics/local_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Variáveis locais
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="syntax_and_semantics/global_variables.html">
+            
+                
+                    <a href="../syntax_and_semantics/global_variables.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Variáveis globais
+                    </a>
+            
             
         </li>
     
@@ -898,7 +898,7 @@
                         
                             <b>4.8.</b>
                         
-                        Types and methods
+                        Tipos e métodos
                     </a>
             
             
@@ -914,7 +914,7 @@
                         
                             <b>4.8.1.</b>
                         
-                        Everything is an object
+                        Tudo é um objeto
                     </a>
             
             
@@ -929,7 +929,7 @@
                         
                             <b>4.8.2.</b>
                         
-                        The Program
+                        O Programa
                     </a>
             
             
@@ -944,7 +944,7 @@
                         
                             <b>4.8.3.</b>
                         
-                        Classes and methods
+                        Classes e métodos
                     </a>
             
             
@@ -960,7 +960,7 @@
                         
                             <b>4.8.3.1.</b>
                         
-                        new, initialize and allocate
+                        new, initialize e allocate
                     </a>
             
             
@@ -975,7 +975,7 @@
                         
                             <b>4.8.3.2.</b>
                         
-                        Methods and instance variables
+                        Métodos e variáveis de instância
                     </a>
             
             
@@ -990,7 +990,7 @@
                         
                             <b>4.8.3.3.</b>
                         
-                        Type inference
+                        Inferência de tipo
                     </a>
             
             
@@ -2011,14 +2011,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="6.1" data-path="guides/concurrency.html">
+        <li class="chapter " data-level="6.1" data-path="guides/performance.html">
+            
+                
+                    <a href="../guides/performance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Performance
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="guides/concurrency.html">
             
                 
                     <a href="../guides/concurrency.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.1.</b>
+                            <b>6.2.</b>
                         
                         Concurrency
                     </a>
@@ -2136,18 +2151,18 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="the-program">The Program</h1>
-<p>The program is a global object in which you can define types, methods and file-local variables.</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># Defines a method in the program</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span></span>(x, y)
+                        <h1 id="o-programa">O Programa</h1>
+<p>O programa &#xE9; um objeto global onde voc&#xEA; pode definir tipos, m&#xE9;todos e vari&#xE1;veis locais em rela&#xE7;&#xE3;o ao arquivo.</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># Define um m&#xE9;todo no programa</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">somar</span></span>(x, y)
   x + y
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-comment"># Invokes the add method in the program</span>
-add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">#=&gt; 3</span>
+<span class="hljs-comment"># Invoca o m&#xE9;todo somar no programa</span>
+somar(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment">#=&gt; 3</span>
 </code></pre>
-<p>A method&apos;s value is the value of its last expression, there&apos;s no need for explicit <code>return</code> expressions. However, explicit <code>return</code> are possible:</p>
-<pre><code class="lang-crystal"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">even?</span></span>(num)
+<p>O valor de um m&#xE9;todo &#xE9; o valor de sua &#xFA;ltima express&#xE3;o, n&#xE3;o existe a necessidade de escrever instru&#xE7;&#xF5;es <code>return</code> expl&#xED;citas. No entanto, elas s&#xE3;o poss&#xED;veis:</p>
+<pre><code class="lang-crystal"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">par?</span></span>(num)
   <span class="hljs-keyword">if</span> num % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>
     <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
   <span class="hljs-keyword">end</span>
@@ -2155,17 +2170,17 @@ add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <spa
   <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>When invoking a method without a receiver, like <code>add(1, 2)</code>, it will be searched in the program if not found in the current type or any of its ancestors.</p>
-<pre><code class="lang-crystal"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span></span>(x, y)
+<p>Ao invocar um m&#xE9;todo sem um receptor, como por exemplo <code>somar(1, 2)</code>, ele ser&#xE1; procurado no programa se n&#xE3;o for encontado no tipo atual ou em algum de seus ancestrais.</p>
+<pre><code class="lang-crystal"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">somar</span></span>(x, y)
   x + y
 <span class="hljs-keyword">end</span>
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bar</span></span>
-    <span class="hljs-comment"># invokes the program&apos;s add method</span>
-    add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+    <span class="hljs-comment"># invoca o m&#xE9;todo somar do programa</span>
+    somar(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
 
-    <span class="hljs-comment"># invokes Foo&apos;s baz method</span>
+    <span class="hljs-comment"># invoca o m&#xE9;todo baz de Foo</span>
     baz(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
   <span class="hljs-keyword">end</span>
 
@@ -2174,7 +2189,7 @@ add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <spa
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>If you want to invoke the program&apos;s method, even though the current type defines a method with the same name, prefix the call with <code>::</code>:</p>
+<p>Se voc&#xEA; quiser invocar o m&#xE9;todo do programa, mesmo que o tipo atual define um m&#xE9;todo com o mesmo nome, coloque o prefixo <code>::</code>:</p>
 <pre><code class="lang-crystal"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">baz</span></span>(x, y)
   x + y
 <span class="hljs-keyword">end</span>
@@ -2190,27 +2205,27 @@ add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <spa
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>Variables declared in a program are not visible inside methods:</p>
+<p>As vari&#xE1;veis declaradas em um programa n&#xE3;o s&#xE3;o vis&#xED;veis dentro de m&#xE9;todos:</p>
 <pre><code class="lang-crystal">x = <span class="hljs-number">1</span>
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span></span>(y)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">somar</span></span>(y)
   x + y <span class="hljs-comment"># error: undefined local variable or method &apos;x&apos;</span>
 <span class="hljs-keyword">end</span>
 
-add(<span class="hljs-number">2</span>)
+somar(<span class="hljs-number">2</span>)
 </code></pre>
-<p>Parentheses in method invocations are optional:</p>
-<pre><code class="lang-crystal">add <span class="hljs-number">1</span>, <span class="hljs-number">2</span> <span class="hljs-comment"># same as add(1, 2)</span>
+<p>Os par&#xEA;nteses s&#xE3;o opcionais nas invoca&#xE7;&#xF5;es de m&#xE9;todos:</p>
+<pre><code class="lang-crystal">somar <span class="hljs-number">1</span>, <span class="hljs-number">2</span> <span class="hljs-comment"># a mesma coisa que somar(1, 2)</span>
 </code></pre>
-<h2 id="main-code">Main code</h2>
-<p>Main code, the code that is run when you compile and run a program, can be written directly in a source file without the need to put it in a special &quot;main&quot; method:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># This is a program that prints &quot;Hello Crystal!&quot;</span>
-puts <span class="hljs-string">&quot;Hello Crystal!&quot;</span>
+<h2 id="c%C3%B3digo-principal">C&#xF3;digo Principal</h2>
+<p>O c&#xF3;digo principal, aquele c&#xF3;digo que executa quando voc&#xEA; compila e roda um programa, pode ser escrito diretamente no arquivo de c&#xF3;digo fonte sem a necessidade de coloc&#xE1;-lo em um m&#xE9;todo especial &quot;main&quot;:</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># Este &#xE9; um programa que imprime &quot;Ol&#xE1; Crystal!&quot;</span>
+puts <span class="hljs-string">&quot;Ol&#xE1; Crystal!&quot;</span>
 </code></pre>
-<p>Main code can also be inside type declarations:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># This is a program that prints &quot;Hello&quot;</span>
+<p>O c&#xF3;digo principal tamb&#xE9;m pode ser colocado dentro de declara&#xE7;&#xF5;es de tipo:</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># Este &#xE9; um programa que imprime &quot;Hello&quot;</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span></span>
-  <span class="hljs-comment"># &apos;self&apos; here is the Hello class</span>
+  <span class="hljs-comment"># &apos;self&apos; aqui &#xE9; a classe Hello</span>
   puts <span class="hljs-keyword">self</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
@@ -2224,10 +2239,10 @@ puts <span class="hljs-string">&quot;Hello Crystal!&quot;</span>
         </div>
 
         
-        <a href="../syntax_and_semantics/everything_is_an_object.html" class="navigation navigation-prev " aria-label="Previous page: Everything is an object"><i class="fa fa-angle-left"></i></a>
+        <a href="../syntax_and_semantics/everything_is_an_object.html" class="navigation navigation-prev " aria-label="Previous page: Tudo é um objeto"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../syntax_and_semantics/classes_and_methods.html" class="navigation navigation-next " aria-label="Next page: Classes and methods"><i class="fa fa-angle-right"></i></a>
+        <a href="../syntax_and_semantics/classes_and_methods.html" class="navigation navigation-next " aria-label="Next page: Classes e métodos"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
